@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_membership_tree" model="ir.ui.view">
+        <field name="name">membership.tree</field>
+        <field name="model">mana_gym.membership</field>
+        <field name="arch" type="xml">
+            <tree string="Memberships">
+                <field name="name"/>
+                <field name="duration"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="mana_gym_membership_action" model="ir.actions.act_window">
+        <field name="name">Memberships</field>
+        <field name="res_model">mana_gym.membership</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_membership_form" model="ir.ui.view">
+        <field name="name">membership.form</field>
+        <field name="model">mana_gym.membership</field>
+        <field name="arch" type="xml">
+            <form string="Membership Form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="duration"/>
+                        <field name="price"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

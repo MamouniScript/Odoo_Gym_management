@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_trainer_tree" model="ir.ui.view">
+        <field name="name">trainer.tree</field>
+        <field name="model">mana_gym.trainer</field>
+        <field name="arch" type="xml">
+            <tree string="Trainers">
+                <field name="name"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="specialization"/>
+                <field name="hourly_rate"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="mana_gym_trainer_action" model="ir.actions.act_window">
+        <field name="name">Trainers</field>
+        <field name="res_model">mana_gym.trainer</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_trainer_form" model="ir.ui.view">
+        <field name="name">trainer.form</field>
+        <field name="model">mana_gym.trainer</field>
+        <field name="arch" type="xml">
+            <form string="Trainer Form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                        <field name="specialization"/>
+                        <field name="certification_details"/>
+                        <field name="hourly_rate"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

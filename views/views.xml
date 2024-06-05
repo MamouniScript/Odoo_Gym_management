@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="mana_gym.list">
+      <field name="name">mana_gym list</field>
+      <field name="model">mana_gym.mana_gym</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="mana_gym.action_window">
+      <field name="name">mana_gym window</field>
+      <field name="res_model">mana_gym.mana_gym</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="mana_gym.action_server">
+      <field name="name">mana_gym server</field>
+      <field name="model_id" ref="model_mana_gym_mana_gym"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="mana_gym" id="mana_gym.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="mana_gym.menu_1" parent="mana_gym.menu_root"/>
+    <menuitem name="Menu 2" id="mana_gym.menu_2" parent="mana_gym.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="mana_gym.menu_1_list" parent="mana_gym.menu_1"
+              action="mana_gym.action_window"/>
+    <menuitem name="Server to list" id="mana_gym" parent="mana_gym.menu_2"
+              action="mana_gym.action_server"/>
+-->
+  </data>
+</odoo>

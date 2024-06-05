@@ -1,0 +1,38 @@
+<odoo>
+    <!-- Graph View for Dashboard -->
+    <record id="view_mana_gym_report_graph" model="ir.ui.view">
+        <field name="name">mana.gym.report.graph</field>
+        <field name="model">mana.gym.report</field>
+        <field name="arch" type="xml">
+            <graph string="Membership Statistics" type="bar">
+                <field name="membership_type_id"/>
+                <field name="membership_status"/>
+                <field name="joining_date" interval="month"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- Pivot View for Dashboard -->
+    <record id="view_mana_gym_report_pivot" model="ir.ui.view">
+        <field name="name">mana.gym.report.pivot</field>
+        <field name="model">mana.gym.report</field>
+        <field name="arch" type="xml">
+            <pivot string="Membership Pivot">
+                <field name="membership_type_id"/>
+                <field name="membership_status"/>
+                <field name="joining_date" interval="month"/>
+            </pivot>
+        </field>
+    </record>
+
+    <!-- Action for Graph and Pivot Views -->
+    <record id="action_mana_gym_report_dashboard" model="ir.actions.act_window">
+        <field name="name">Mana Gym Report Dashboard</field>
+        <field name="res_model">mana.gym.report</field>
+        <field name="view_mode">graph,pivot</field>
+        <field name="view_ids" eval="[(5, 0, 0), (0, 0, {'view_mode': 'graph', 'view_id': ref('view_mana_gym_report_graph')}), (0, 0, {'view_mode': 'pivot', 'view_id': ref('view_mana_gym_report_pivot')})]"/>
+    </record>
+    <!-- Menu Item for Dashboard -->
+    <menuitem id="menu_mana_gym_report_dashboard" name="Dashboard" parent="mana_gym_main_menu" sequence="1" action="action_mana_gym_report_dashboard"/>
+
+</odoo>

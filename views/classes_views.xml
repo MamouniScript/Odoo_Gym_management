@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_class_tree" model="ir.ui.view">
+        <field name="name">class.tree</field>
+        <field name="model">mana_gym.class</field>
+        <field name="arch" type="xml">
+            <tree string="Classes">
+                <field name="title"/>
+                <field name="trainer_id"/>
+                <field name="duration"/>
+                <field name="location"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="mana_gym_class_action" model="ir.actions.act_window">
+        <field name="name">Classes</field>
+        <field name="res_model">mana_gym.class</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_class_form" model="ir.ui.view">
+        <field name="name">class.form</field>
+        <field name="model">mana_gym.class</field>
+        <field name="arch" type="xml">
+            <form string="Class Form">
+                <sheet>
+                    <group>
+                        <field name="title"/>
+                        <field name="description"/>
+                        <field name="duration"/>
+                        <field name="max_capacity"/>
+                        <field name="trainer_id"/>
+                        <field name="location"/>
+                    </group>
+                    <group>
+                        <field name="schedule_ids">
+                            <tree>
+                                <field name="day"/>
+                                <field name="time"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <field name="day"/>
+                                    <field name="time"/>
+                                    <field name="location"/>
+                                </group>
+                            </form>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,44 @@
+<odoo>
+    <!-- Tree view for Payments -->
+    <record id="view_tree_payment" model="ir.ui.view">
+        <field name="name">mana_gym.payment.tree</field>
+        <field name="model">mana_gym.payment</field>
+        <field name="arch" type="xml">
+            <tree string="Payments">
+                <field name="member_id"/>
+                <field name="membership_id"/>
+                <field name="amount"/>
+                <field name="payment_date"/>
+                <field name="payment_method"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form view for Payments -->
+    <record id="view_form_payment" model="ir.ui.view">
+        <field name="name">mana_gym.payment.form</field>
+        <field name="model">mana_gym.payment</field>
+        <field name="arch" type="xml">
+            <form string="Payment">
+                <sheet>
+                    <group>
+                        <field name="member_id"/>
+                        <field name="membership_id"/>
+                        <field name="amount"/>
+                        <field name="payment_date"/>
+                        <field name="payment_method"/>
+                        <field name="status"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action for Payments -->
+    <record id="action_mana_gym_payment" model="ir.actions.act_window">
+        <field name="name">Payments</field>
+        <field name="res_model">mana_gym.payment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

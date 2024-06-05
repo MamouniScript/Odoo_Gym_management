@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <!-- Top-level menu -->
+    <menuitem id="mana_gym_main_menu" name="Mana Gym" sequence="10"/>
+
+    <!-- Actions -->
+    <record id="action_mana_gym_member" model="ir.actions.act_window">
+        <field name="name">Members</field>
+        <field name="res_model">mana_gym.member</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_mana_gym_equipment" model="ir.actions.act_window">
+        <field name="name">Equipment</field>
+        <field name="res_model">mana_gym.equipment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_mana_gym_class" model="ir.actions.act_window">
+        <field name="name">Classes</field>
+        <field name="res_model">mana_gym.class</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_mana_gym_membership" model="ir.actions.act_window">
+        <field name="name">Memberships</field>
+        <field name="res_model">mana_gym.membership</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_mana_gym_payment" model="ir.actions.act_window">
+        <field name="name">Payments</field>
+        <field name="res_model">mana_gym.payment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_mana_gym_schedule" model="ir.actions.act_window">
+        <field name="name">Schedules</field>
+        <field name="res_model">mana_gym.schedule</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_mana_gym_trainer" model="ir.actions.act_window">
+        <field name="name">Trainers</field>
+        <field name="res_model">mana_gym.trainer</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Define action for iframe view -->
+    <record id="action_iframe_view" model="ir.actions.act_url">
+        <field name="name">Iframe View</field>
+        <field name="url">https://gamma.app/embed/cj6qfp3b54q68cu</field>
+        <field name="target">new</field> <!-- Opens in a new tab -->
+    </record>
+
+    <!-- Action for Dashboard
+    <record id="action_dashboard" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="res_model">dashboard.widgets</field>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="view_dashboard"/>
+    </record> -->
+
+    <!-- Sub-menus -->
+    <menuitem id="menu_mana_gym_members" name="Members" parent="mana_gym_main_menu" sequence="2" action="action_mana_gym_member"/>
+    <menuitem id="menu_mana_gym_equipment" name="Equipment" parent="mana_gym_main_menu" sequence="3" action="action_mana_gym_equipment"/>
+    <menuitem id="menu_mana_gym_classes" name="Classes" parent="mana_gym_main_menu" sequence="4" action="action_mana_gym_class"/>
+    <menuitem id="menu_mana_gym_memberships" name="Memberships" parent="mana_gym_main_menu" sequence="5" action="action_mana_gym_membership"/>
+    <menuitem id="menu_mana_gym_payments" name="Payments" parent="mana_gym_main_menu" sequence="6" action="action_mana_gym_payment"/>
+    <menuitem id="menu_mana_gym_schedules" name="Schedules" parent="mana_gym_main_menu" sequence="7" action="action_mana_gym_schedule"/>
+    <menuitem id="menu_mana_gym_trainers" name="Trainers" parent="mana_gym_main_menu" sequence="8" action="action_mana_gym_trainer"/>
+    <menuitem id="menu_mana_gym_report_dashboard" name="Dashboard" parent="mana_gym_main_menu" sequence="1" action="action_mana_gym_report_dashboard"/>
+    <menuitem id="menu_iframe_view" name="Presentation" parent="mana_gym_main_menu" sequence="9" action="action_iframe_view"/>
+
+</odoo>

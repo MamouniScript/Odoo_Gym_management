@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mana_gym_member,Member Access,model_mana_gym_member,base.group_user,1,1,1,1
+access_mana_gym_equipment,Equipment Access,model_mana_gym_equipment,base.group_user,1,1,1,1
+access_mana_gym_class,Class Access,model_mana_gym_class,base.group_user,1,1,1,1
+access_mana_gym_membership,Membership Access,model_mana_gym_membership,base.group_user,1,1,1,1
+access_mana_gym_payment,Payment Access,model_mana_gym_payment,base.group_user,1,1,1,1
+access_mana_gym_schedule,Schedule Access,model_mana_gym_schedule,base.group_user,1,1,1,1
+access_mana_gym_trainer,Trainer Access,model_mana_gym_trainer,base.group_user,1,1,1,1
+access_mana_gym_report,mana.gym.report,model_mana_gym_report,base.group_user,1,1,1,1

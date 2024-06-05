@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_iframe" model="ir.ui.view">
+        <field name="name">Presentation</field>
+        <field name="model">ir.ui.view</field>
+        <field name="type">qweb</field> <!-- Set the type to qweb -->
+        <field name="arch" type="xml">
+            <iframe src="https://gamma.app/embed/cj6qfp3b54q68cu" style="width: 700px; max-width: 100%; height: 450px"
+                    allow="fullscreen" title="Présentation du système de gestion de la salle de sport Mana"/>
+        </field>
+    </record>
+</odoo>
